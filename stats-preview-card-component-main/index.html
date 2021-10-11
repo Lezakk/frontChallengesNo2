@@ -1,33 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        body {
+            background-color: hsl(233, 47%, 7%);
+        }
+
+        .main_rectangle {
+            margin: auto auto auto auto;
+            width: 50%;
+            padding: 10%;
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+
+        .left_text_area {
+            order: 1;
+            width: 50%;
+            background-color: hsl(244, 38%, 16%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            order: 1;
+            width: 70%;
+            padding: 5%;
+            margin: 15% auto 2% auto;
+        }
+
+        .text_field {
+            order: 2;
+            width: 70%;
+            padding: 5%;
+            margin: 2% auto auto auto;
+        }
+
+        .numbers_area {
+            order: 3;
+            display: flex;
+            flex-direction: row;
+            margin: auto auto auto auto;
+            padding-right: 40%;
+            padding-bottom: 10%;
+        }
+
+        .companies_text {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            margin: auto auto auto auto;
+            padding: 10%;
+        }
+
+        .templates_text {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            margin: auto auto auto auto;
+            padding: 10%;
+        }
+
+        .queries_text {
+            order: 3;
+            display: flex;
+            flex-direction: column;
+            margin: auto auto auto auto;
+            padding: 10%;
+        }
+
+        .right_photo_area {
+            order: 2;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
+<div class="main_rectangle">
+    <div class="left_text_area">
+        <div class="header">
+            Get insights that help your business grow.
+        </div>
+        <div class="text_field">
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer
+            experience, and overall efficiency.
+        </div>
+        <div class="numbers_area">
+            <div class="companies_text">
+                <div class="companies_number_text">
+                    10k+
+                </div>
+                <div class="companies_small_text_field">
+                    companies
+                </div>
+            </div>
+            <div class="templates_text">
+                <div class="templates_number_text">
+                    314
+                </div>
+                <div class="templates_small_text_field">
+                    templates
+                </div>
+            </div>
+            <div class="queries_text">
+                <div class="queries_number_text">
+                    12m+
+                </div>
+                <div class="queries_small_text_field">
+                    queries
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_photo_area">
+        <img src="images/image-header-desktop.jpg" alt="kurwa, ale ikonka">
+    </div>
+</div>
 
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+</div>
 </body>
 </html>
