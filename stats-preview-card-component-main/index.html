@@ -11,6 +11,15 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url(Fonts/Inter-VariableFont_slnt,wght.ttf);
+        }
+        @font-face {
+            font-family: mySecondFont;
+            src: url(Fonts/LexendDeca-VariableFont_wght.ttf);
+        }
+
         .attribution {
             font-size: 11px;
             text-align: center;
@@ -24,9 +33,19 @@
             background-color: hsl(233, 47%, 7%);
         }
 
+        header {
+            font-family: mySecondFont;
+        }
+
+        p {
+            font-family: myFirstFont;
+            color: lightslategray;
+        }
+
         .main_rectangle {
             margin: auto auto auto auto;
-            width: 50%;
+            width: 65%;
+            height: 30%;
             padding: 10%;
             display: flex;
             flex-direction: row;
@@ -35,7 +54,7 @@
 
         .left_text_area {
             order: 1;
-            width: 50%;
+            width: 53%;
             background-color: hsl(244, 38%, 16%);
             display: flex;
             flex-direction: column;
@@ -45,21 +64,27 @@
             order: 1;
             width: 70%;
             padding: 5%;
-            margin: 15% auto 2% auto;
+            margin: 10% auto auto 7%;
+            font-size: 40px;
+            font-weight: bold;
         }
+
 
         .text_field {
             order: 2;
-            width: 70%;
+            width: 60%;
             padding: 5%;
-            margin: 2% auto auto auto;
+            margin: auto auto auto 7%;
+            font-size: 15px;
+            font-weight: normal;
         }
 
         .numbers_area {
             order: 3;
+            width: 70%;
             display: flex;
             flex-direction: row;
-            margin: auto auto auto auto;
+            margin: auto auto auto 5%;
             padding-right: 40%;
             padding-bottom: 10%;
         }
@@ -90,49 +115,87 @@
 
         .right_photo_area {
             order: 2;
-            width: 50%;
+            width: 47%;
+            position: relative;
         }
+
+        .right_photo_area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0.5;
+            background-color: hsl(277, 64%, 61%);
+            width: 100%;
+
+        }
+        .picture {
+            width: 100%;
+            height: 100%;
+        }
+
+        .insights_text {
+            color: hsl(277, 64%, 61%);
+        }
+
+        .small_header_class {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .small_text_class {
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .picture {
+                width: 30%;
+            }
+        }
+
     </style>
 </head>
 <body>
 <div class="main_rectangle">
     <div class="left_text_area">
-        <div class="header">
-            Get insights that help your business grow.
-        </div>
-        <div class="text_field">
+        <header class="header">
+            Get <span class="insights_text">insights</span> that help your business grow.
+        </header>
+        <p class="text_field">
             Discover the benefits of data analytics and make better decisions regarding revenue, customer
             experience, and overall efficiency.
-        </div>
+        </p>
         <div class="numbers_area">
             <div class="companies_text">
-                <div class="companies_number_text">
+                <header class="companies_number_text small_header_class">
                     10k+
-                </div>
-                <div class="companies_small_text_field">
+                </header>
+                <p class="companies_small_text_field small_text_class">
                     companies
-                </div>
+                </p>
             </div>
             <div class="templates_text">
-                <div class="templates_number_text">
+                <header class="templates_number_text small_header_class">
                     314
-                </div>
-                <div class="templates_small_text_field">
+                </header>
+                <p class="templates_small_text_field small_text_class">
                     templates
-                </div>
+                </p>
             </div>
             <div class="queries_text">
-                <div class="queries_number_text">
+                <header class="queries_number_text small_header_class">
                     12m+
-                </div>
-                <div class="queries_small_text_field">
+                </header>
+                <p class="queries_small_text_field small_text_class">
                     queries
-                </div>
+                </p>
             </div>
         </div>
     </div>
     <div class="right_photo_area">
-        <img src="images/image-header-desktop.jpg" alt="kurwa, ale ikonka">
+        <img src="images/image-header-desktop.jpg" class="picture" alt="kurwa, ale ikonka">
     </div>
 </div>
 
