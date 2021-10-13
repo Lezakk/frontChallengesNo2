@@ -149,9 +149,44 @@
             text-transform: uppercase;
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1401px) {
             .picture {
-                width: 30%;
+                width: 100%;
+            }
+            .main_rectangle {
+                flex-direction: column;
+                width: 80%;
+                margin: auto auto auto auto;
+                padding: 10%;
+            }
+            .left_text_area {
+                order:2;
+                width: 100%;
+
+            }
+            .right_photo_area {
+                order: 1;
+                width: 100%;
+                height: 80%;
+            }
+            .numbers_area {
+                flex-direction: column;
+                margin: auto 15% auto 15%;
+            }
+            .text_field {
+                margin: auto 15% auto 15%;
+            }
+            .header {
+                margin: auto auto auto auto;
+            }
+            .small_header_class {
+                font-size: 40px;
+            }
+            p {
+                text-align: center;
+            }
+            header {
+                text-align: center;
             }
         }
 
